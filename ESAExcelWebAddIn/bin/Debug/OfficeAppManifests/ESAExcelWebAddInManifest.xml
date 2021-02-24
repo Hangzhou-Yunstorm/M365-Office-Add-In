@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+          xsi:type="TaskPaneApp">
+
+  <!-- 开始基本设置：外接程序元数据，用于所有版本的 Office（除非提供重写）。 -->
+
+  <!-- 重要事项！ID 对于外接程序必须是唯一的，如果重复使用该清单，请确保将此 ID 改为新的 GUID。 -->
+  <Id>98b029db-ce64-4f56-bace-dc1e23d0fd8e</Id>
+
+  <!--版本。来自应用商店的更新只有在版本变化时才会被触发。 -->
+  <Version>1.0.0.0</Version>
+  <ProviderName>AnyShare</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+
+  <!-- 外接程序的显示名称。在应用商店中使用，出现在外接程序对话框等 Office UI 中。 -->
+  <DisplayName DefaultValue="AnyShare">
+    <Override Locale="zh-CN" Value="AnyShare" />
+    <Override Locale="zh-TW" Value="AnyShare" />
+  </DisplayName>
+  <Description DefaultValue="Start using the office add-in, Successfully installed AnyShare office add-in!">
+    <Override Locale="zh-CN" Value="开始使用office插件，已成功安装AnyShare office插件！" />
+    <Override Locale="zh-TW" Value="開始使用office挿件，已成功安裝AnyShare office挿件！" />
+  </Description>
+
+  <!-- 外接程序的图标。用于安装屏幕和外接程序对话框中。 -->
+  <IconUrl DefaultValue="http://localhost:61543/Images/Button32x32.png" />
+
+  <!-- 导航时允许使用的域。例如，如果使用 ShowTaskpane，然后得到一个 href 链接，则只有在此列表上存在该域时，才允许导航。 -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+  </AppDomains>
+  <!--结束基本设置。 -->
+
+  <!--开始任务窗格模式集成。如果没有 VersionOverrides 或如果 Office 客户端版本不支持外接程序命令，将使用此部分。 -->
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="http://localhost:61543/" />
+  </DefaultSettings>
+  <!-- 结束任务窗格模式集成。  -->
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- 开始外接程序命令模式集成。 -->
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+    <!-- 主机节点为必需。 -->
+    <Hosts>
+      <!-- 每个主机可具有不同的命令集。 -->
+      <!-- Excel 主机为工作簿，文档中的 Word 主机和 PowerPoint 主机为演示文稿。 -->
+      <!-- 确保重写的主机与清单顶部声明的主机相匹配。 -->
+      <Host xsi:type="Workbook">
+        <!-- 外形规格。当前只支持 DesktopFormFactor。 -->
+        <DesktopFormFactor>
+          <!-- 函数文件是包含 JavaScript 的 HTML 页面，将在此页面中调用用于 ExecuteAction 的函数。             将 FunctionFile 视为代码隐藏 ExecuteFunction。 -->
+          <FunctionFile resid="Anyshare.DesktopFunctionFile.Url" />
+
+          <!-- PrimaryCommandSurface 为 Office 主功能区。 -->
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <!-- 使用 OfficeTab 来扩展现有选项卡。使用 CustomTab 来创建新选项卡。 -->
+            <OfficeTab id="TabHome">
+              <!-- 确保为组提供唯一 ID。建议 ID 为使用公司名的命名空间。 -->
+              <Group id="Anyshare.Group">
+                <!-- 为组指定标签。resid 必须指向 ShortString 资源。 -->
+                <Label resid="Anyshare.GroupLabel" />
+                <!-- 图标。必需大小: 16、32、80，可选大小: 20、24、40、48、64。强烈建议为大 UX 提供所有大小。 -->
+                <!-- 使用 PNG 图标。资源部分中的所有 URL 必须使用 HTTPS。 -->
+                <Icon>
+                  <bt:Image size="16" resid="Anyshare.SaveFile_16x16" />
+                  <bt:Image size="20" resid="Anyshare.SaveFile_20x20" />
+                  <bt:Image size="24" resid="Anyshare.SaveFile_24x24" />
+                  <bt:Image size="32" resid="Anyshare.SaveFile_32x32" />
+                  <bt:Image size="40" resid="Anyshare.SaveFile_40x40" />
+                  <bt:Image size="48" resid="Anyshare.SaveFile_48x48" />
+                  <bt:Image size="60" resid="Anyshare.SaveFile_60x60" />
+                  <bt:Image size="80" resid="Anyshare.SaveFile_80x80" />
+                  <bt:Image size="16" resid="Anyshare.OpenFile_16x16" />
+                  <bt:Image size="20" resid="Anyshare.OpenFile_20x20" />
+                  <bt:Image size="24" resid="Anyshare.OpenFile_24x24" />
+                  <bt:Image size="32" resid="Anyshare.OpenFile_32x32" />
+                  <bt:Image size="40" resid="Anyshare.OpenFile_40x40" />
+                  <bt:Image size="48" resid="Anyshare.OpenFile_48x48" />
+                  <bt:Image size="60" resid="Anyshare.OpenFile_60x60" />
+                  <bt:Image size="80" resid="Anyshare.OpenFile_80x80" />
+                  <bt:Image size="16" resid="Anyshare.Settings_16x16" />
+                  <bt:Image size="20" resid="Anyshare.Settings_20x20" />
+                  <bt:Image size="24" resid="Anyshare.Settings_24x24" />
+                  <bt:Image size="32" resid="Anyshare.Settings_32x32" />
+                  <bt:Image size="40" resid="Anyshare.Settings_40x40" />
+                  <bt:Image size="48" resid="Anyshare.Settings_48x48" />
+                  <bt:Image size="60" resid="Anyshare.Settings_60x60" />
+                  <bt:Image size="80" resid="Anyshare.Settings_80x80" />
+                </Icon>
+
+                <!-- SaveFile -->
+                <Control xsi:type="Button" id="SaveFileButton">
+                  <Label resid="SaveFileButton.Label" />
+                  <Supertip>
+                    <Title resid="SaveFileButton.Label" />
+                    <Description resid="SaveFileButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Anyshare.SaveFile_16x16" />
+                    <bt:Image size="20" resid="Anyshare.SaveFile_20x20" />
+                    <bt:Image size="24" resid="Anyshare.SaveFile_24x24" />
+                    <bt:Image size="32" resid="Anyshare.SaveFile_32x32" />
+                    <bt:Image size="40" resid="Anyshare.SaveFile_40x40" />
+                    <bt:Image size="48" resid="Anyshare.SaveFile_48x48" />
+                    <bt:Image size="60" resid="Anyshare.SaveFile_60x60" />
+                    <bt:Image size="80" resid="Anyshare.SaveFile_80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TaskpaneId</TaskpaneId>
+                    <SourceLocation resid="Anyshare.SaveFile.Url" />
+                  </Action>
+                </Control>
+
+                <!-- OpenFile -->
+                <Control xsi:type="Button" id="OpenFileButton">
+                  <Label resid="OpenFileButton.Label" />
+                  <Supertip>
+                    <Title resid="OpenFileButton.Label" />
+                    <Description resid="OpenFileButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Anyshare.OpenFile_16x16" />
+                    <bt:Image size="20" resid="Anyshare.OpenFile_20x20" />
+                    <bt:Image size="24" resid="Anyshare.OpenFile_24x24" />
+                    <bt:Image size="32" resid="Anyshare.OpenFile_32x32" />
+                    <bt:Image size="40" resid="Anyshare.OpenFile_40x40" />
+                    <bt:Image size="48" resid="Anyshare.OpenFile_48x48" />
+                    <bt:Image size="60" resid="Anyshare.OpenFile_60x60" />
+                    <bt:Image size="80" resid="Anyshare.OpenFile_80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TaskpaneId</TaskpaneId>
+                    <SourceLocation resid="Anyshare.OpenFile.Url" />
+                  </Action>
+                </Control>
+
+                <!-- Settings -->
+                <Control xsi:type="Button" id="SettingsButton">
+                  <Label resid="SettingsButton.Label" />
+                  <Supertip>
+                    <Title resid="SettingsButton.Label" />
+                    <Description resid="SettingsButton.Tooltip" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Anyshare.Settings_16x16" />
+                    <bt:Image size="20" resid="Anyshare.Settings_20x20" />
+                    <bt:Image size="24" resid="Anyshare.Settings_24x24" />
+                    <bt:Image size="32" resid="Anyshare.Settings_32x32" />
+                    <bt:Image size="40" resid="Anyshare.Settings_40x40" />
+                    <bt:Image size="48" resid="Anyshare.Settings_48x48" />
+                    <bt:Image size="60" resid="Anyshare.Settings_60x60" />
+                    <bt:Image size="80" resid="Anyshare.Settings_80x80" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TaskpaneId</TaskpaneId>
+                    <SourceLocation resid="Anyshare.Taskpane.Url" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <!-- 你可以在主机和窗体上使用资源。 -->
+    <Resources>
+      <bt:Images>
+        <!-- Settings -->
+        <bt:Image id="Anyshare.Settings_16x16" DefaultValue="http://localhost:61543/Images/Settings/16x16.png" />
+        <bt:Image id="Anyshare.Settings_20x20" DefaultValue="http://localhost:61543/Images/Settings/20x20.png" />
+        <bt:Image id="Anyshare.Settings_24x24" DefaultValue="http://localhost:61543/Images/Settings/24x24.png" />
+        <bt:Image id="Anyshare.Settings_32x32" DefaultValue="http://localhost:61543/Images/Settings/32x32.png" />
+        <bt:Image id="Anyshare.Settings_40x40" DefaultValue="http://localhost:61543/Images/Settings/40x40.png" />
+        <bt:Image id="Anyshare.Settings_48x48" DefaultValue="http://localhost:61543/Images/Settings/48x48.png" />
+        <bt:Image id="Anyshare.Settings_64x64" DefaultValue="http://localhost:61543/Images/Settings/64x64.png" />
+        <bt:Image id="Anyshare.Settings_80x80" DefaultValue="http://localhost:61543/Images/Settings/80x80.png" />
+
+        <!-- SaveFile -->
+        <bt:Image id="Anyshare.SaveFile_16x16" DefaultValue="http://localhost:61543/Images/SaveFile/16x16.png" />
+        <bt:Image id="Anyshare.SaveFile_20x20" DefaultValue="http://localhost:61543/Images/SaveFile/20x20.png" />
+        <bt:Image id="Anyshare.SaveFile_24x24" DefaultValue="http://localhost:61543/Images/SaveFile/24x24.png" />
+        <bt:Image id="Anyshare.SaveFile_32x32" DefaultValue="http://localhost:61543/Images/SaveFile/32x32.png" />
+        <bt:Image id="Anyshare.SaveFile_40x40" DefaultValue="http://localhost:61543/Images/SaveFile/40x40.png" />
+        <bt:Image id="Anyshare.SaveFile_48x48" DefaultValue="http://localhost:61543/Images/SaveFile/48x48.png" />
+        <bt:Image id="Anyshare.SaveFile_64x64" DefaultValue="http://localhost:61543/Images/SaveFile/64x64.png" />
+        <bt:Image id="Anyshare.SaveFile_80x80" DefaultValue="http://localhost:61543/Images/SaveFile/80x80.png" />
+
+        <!-- OpenFile -->
+        <bt:Image id="Anyshare.OpenFile_16x16" DefaultValue="http://localhost:61543/Images/OpenFile/16x16.png" />
+        <bt:Image id="Anyshare.OpenFile_20x20" DefaultValue="http://localhost:61543/Images/OpenFile/20x20.png" />
+        <bt:Image id="Anyshare.OpenFile_24x24" DefaultValue="http://localhost:61543/Images/OpenFile/24x24.png" />
+        <bt:Image id="Anyshare.OpenFile_32x32" DefaultValue="http://localhost:61543/Images/OpenFile/32x32.png" />
+        <bt:Image id="Anyshare.OpenFile_40x40" DefaultValue="http://localhost:61543/Images/OpenFile/40x40.png" />
+        <bt:Image id="Anyshare.OpenFile_48x48" DefaultValue="http://localhost:61543/Images/OpenFile/48x48.png" />
+        <bt:Image id="Anyshare.OpenFile_64x64" DefaultValue="http://localhost:61543/Images/OpenFile/64x64.png" />
+        <bt:Image id="Anyshare.OpenFile_80x80" DefaultValue="http://localhost:61543/Images/OpenFile/80x80.png" />
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="Anyshare.DesktopFunctionFile.Url" DefaultValue="http://localhost:61543/Excel/Functions" />
+        <bt:Url id="Anyshare.Taskpane.Url" DefaultValue="http://localhost:61543/Excel" />
+        <bt:Url id="Anyshare.SaveFile.Url" DefaultValue="http://localhost:61543/Excel/SaveFile" />
+        <bt:Url id="Anyshare.OpenFile.Url" DefaultValue="http://localhost:61543/Excel/OpenFile" />
+        <bt:Url id="Anyshare.Login.Url" DefaultValue="http://localhost:61543/Login" />
+      </bt:Urls>
+      <!-- ShortStrings 最大字符数==125。 -->
+      <bt:ShortStrings>
+        <bt:String id="SettingsButton.Label" DefaultValue="Settings">
+          <bt:Override Locale="zh-CN" Value="设 置" />
+          <bt:Override Locale="zh-TW" Value="設 定" />
+        </bt:String>
+        <bt:String id="SaveFileButton.Label" DefaultValue="Save To Cloud">
+          <bt:Override Locale="zh-CN" Value="保存到云端" />
+          <bt:Override Locale="zh-TW" Value="保存到雲端" />
+        </bt:String>
+        <bt:String id="OpenFileButton.Label" DefaultValue="Open Cloud File">
+          <bt:Override Locale="zh-CN" Value="打开云端文件" />
+          <bt:Override Locale="zh-TW" Value="打開雲端檔案" />
+        </bt:String>
+        <bt:String id="Anyshare.GroupLabel" DefaultValue="Anyshare">
+          <bt:Override Locale="zh-CN" Value="Anyshare" />
+          <bt:Override Locale="zh-TW" Value="Anyshare" />
+        </bt:String>
+        <bt:String id="LoginButton.Label" DefaultValue="Login Page" />
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="SettingsButton.Tooltip" DefaultValue="Settings">
+          <bt:Override Locale="zh-CN" Value="设 置" />
+          <bt:Override Locale="zh-TW" Value="設 定" />
+        </bt:String>
+        <bt:String id="SaveFileButton.Tooltip" DefaultValue="Save To Cloud">
+          <bt:Override Locale="zh-CN" Value="保存到云端" />
+          <bt:Override Locale="zh-TW" Value="保存到雲端" />
+        </bt:String>
+        <bt:String id="OpenFileButton.Tooltip" DefaultValue="Open Cloud File">
+          <bt:Override Locale="zh-CN" Value="打开云端文件" />
+          <bt:Override Locale="zh-TW" Value="打開雲端檔案" />
+        </bt:String>
+        <bt:String id="LoginButton.Tooltip" DefaultValue="Login Page" />
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+  <!-- 结束外接程序命令模式集成。 -->
+
+</OfficeApp>

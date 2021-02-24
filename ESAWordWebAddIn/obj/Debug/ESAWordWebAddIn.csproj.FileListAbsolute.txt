@@ -1,0 +1,6 @@
+E:\ASOfficeAddIN\ESAWordWebAddIn\bin\Debug\App_Data\readme.txt
+E:\ASOfficeAddIN\ESAWordWebAddIn\bin\Debug\ESAWordWebAddIn.dll.config
+E:\ASOfficeAddIN\ESAWordWebAddIn\obj\Debug\ESAWordWebAddIn.csprojAssemblyReference.cache
+E:\ASOfficeAddIN\ESAWordWebAddIn\obj\Debug\ESAWordWebAddIn.csproj.CoreCompileInputs.cache
+E:\ASOfficeAddIN\ESAWordWebAddIn\bin\Debug\Config\date.txt
+E:\ASOfficeAddIN\ESAWordWebAddIn\bin\Debug\Config\version.txt

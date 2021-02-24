@@ -1,0 +1,2 @@
+bin\Debug\app.publish\OfficeAppManifests\ESAPowerPointWebAddInManifest.xml
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\bin\Debug\app.publish\ESAPowerPointWebAddIn.app

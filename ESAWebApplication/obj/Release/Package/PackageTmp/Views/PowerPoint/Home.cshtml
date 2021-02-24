@@ -1,0 +1,47 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+    <link href="~/Content/fontfamily.css" rel="stylesheet" />
+    <link href="~/Content/Commons/Home.css?v=20201202" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="~/Scripts/PlugIns/layer/layer.js"></script>
+
+    <script src="~/Scripts/Login/Common.js?v=20201202"></script>
+    <script src="~/Scripts/UIStrings.js?v=20201202"></script>
+    <script src="~/Scripts/Common/Home.js?v=20201202"></script>
+</head>
+<body>
+    <div>
+        <div class="o_title">
+            <span class="OfficeTitle"></span>
+        </div>
+        <div class="md_div">
+            <div class="img_div" onclick="javascript:window.location.href='/PowerPoint/SaveFile'">
+                <img src="~/Images/SaveFile/48x48.png" />
+                <p class="SaveFile"></p>
+            </div>
+        </div>
+        <div class="md_div">
+            <div class="img_div" onclick="javascript:window.location.href='/PowerPoint/OpenFile'">
+                <img src="~/Images/OpenFile/48x48.png" />
+                <p class="OpenFile"></p>
+            </div>
+        </div>
+        <div class="md_div">
+            <div class="img_div" onclick="javascript:window.location.href='/PowerPoint'">
+                <img src="~/Images/Settings/48x48.png" />
+                <p class="Settings"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

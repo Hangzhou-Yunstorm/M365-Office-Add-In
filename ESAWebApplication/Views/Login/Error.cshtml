@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <link href="~/Content/fontfamily.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/Login/Common.js?v=20201202"></script>
+    <script src="~/Scripts/UIStrings.js?v=20201202"></script>
+    <script src="~/Scripts/Language.js?v=20201202"></script>
+    <script src="~/Scripts/Login/Error.js?v=20201202"></script>
+</head>
+<body>
+    <input type="hidden" value="@ViewBag.Language" id="h_language" />
+    <div style="width:1200px; margin:auto;">
+        <div style="text-align:center;">
+            <p style="font-family: SourceHanSansCN-Bold; font-size: 32px; color: #54639C;" id="title_p"></p>
+        </div>
+        <div style="text-align:center;">
+            <img class="login_img" style="width:1200px;" src="~/Images/Login/failed.png" />
+            <p style="margin:0;font-family: SourceHanSansCN-Regular;font-size: 18px;color: #000000;opacity: 0.85;" id="dis_p"></p>
+        </div>
+    </div>
+</body>
+</html>

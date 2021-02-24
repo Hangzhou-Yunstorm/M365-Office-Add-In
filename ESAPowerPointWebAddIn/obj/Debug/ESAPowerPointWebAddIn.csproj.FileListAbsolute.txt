@@ -1,0 +1,5 @@
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\bin\Debug\App_Data\readme.txt
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\bin\Debug\ESAPowerPointWebAddIn.dll.config
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\obj\Debug\ESAPowerPointWebAddIn.csprojAssemblyReference.cache
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\obj\Debug\ESAPowerPointWebAddIn.csproj.CoreCompileInputs.cache
+E:\ASOfficeAddIN\ESAPowerPointWebAddIn\bin\Debug\OfficeAppManifests\ESAOutlookWebAddInManifest.xml

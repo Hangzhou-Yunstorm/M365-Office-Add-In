@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Published:70EDFC97-B41D-43C5-B751-7C00AD999804-->
+<App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest" Name="ESAExcelWebAddIn" ProductID="{bce5bd11-0fea-4e64-a81b-b61bf18efedb}" Version="1.0.0.0" SharePointMinVersion="15.0.0.0">
+  <Properties>
+    <Title>ESAExcelWebAddIn</Title>
+    <StartPage>https://go.microsoft.com/fwlink/?LinkID=278993</StartPage>
+  </Properties>
+  <AppPrincipal>
+    <Internal />
+  </AppPrincipal>
+</App>

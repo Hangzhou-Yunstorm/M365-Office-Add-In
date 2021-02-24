@@ -1,0 +1,87 @@
+﻿.logo {
+    text-align: center;
+    margin: 60px 0 20px 0;
+}
+
+.layui-form-selected, .layui-form-select .layui-input, .layui-form-selected dl {
+    font-size: 13px;
+    color: #7F8391;
+    border: none;
+    font-family: SourceHanSansCN-Regular;
+    width: 100px;
+}
+
+#languageSelect {
+    font-size: 13px;
+    color: #7F8391;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("/Images/Logo/language_sel.png") no-repeat scroll right center transparent;
+    padding-right: 16px;
+    padding-left: 4px;
+    font-family: SourceHanSansCN-Regular;
+}
+
+    #languageSelect::-ms-expand {
+        display: none;
+    }
+
+.lg_set {
+    float: right;
+}
+
+    .lg_set img {
+        height: 20px;
+        position: relative;
+    }
+
+    .lg_set select {
+        float: left;
+        height: 20px;
+    }
+
+.submit-login {
+    text-align: center;
+}
+
+.btn-login {
+    width: 90%;
+    background: #54639C;
+    border: 1px solid #54639C;
+    border-radius: 4px;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 25px;
+    height: 32px;
+    margin: 20px 0;
+}
+
+    .btn-login:hover {
+        background: #6c79aa;
+        border: 1px solid #6c79aa;
+    }
+
+    .btn-login:active {
+        background: #54639c;
+        border: 1px solid #54639c;
+    }
+
+#login-error-msg {
+    font-family: SourceHanSansCN-Regular;
+    font-size: 13px;
+    color: #E60012;
+    line-height: 23px;
+}
+
+.goto {
+    cursor: pointer;
+    color: #54639C;
+}
+
+.logining {
+    text-align: center;
+    margin: 10px 0;
+}

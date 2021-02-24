@@ -1,0 +1,7 @@
+False
+318c4a31-d33c-422b-8f3b-392629f9f6a82c0bb1e1-aa68-4d05-a8ba-67cb94103eb5
+{ecd0f4fe-5759-477a-8199-478e284d7e90}{9f6ae0cb-656c-4404-a3af-17f123dd4a75}
+{546f6eab-30a9-4279-9af9-42ffd2328e29}
+1.0.0.0
+ESAWordWebAddIn
+_layouts/15/

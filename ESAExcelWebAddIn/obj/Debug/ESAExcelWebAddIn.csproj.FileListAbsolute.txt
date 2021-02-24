@@ -1,0 +1,5 @@
+E:\ASOfficeAddIN\ESAExcelWebAddIn\bin\Debug\App_Data\readme.txt
+E:\ASOfficeAddIN\ESAExcelWebAddIn\bin\Debug\ESAExcelWebAddIn.dll.config
+E:\ASOfficeAddIN\ESAExcelWebAddIn\obj\Debug\ESAExcelWebAddIn.csprojAssemblyReference.cache
+E:\ASOfficeAddIN\ESAExcelWebAddIn\obj\Debug\ESAExcelWebAddIn.csproj.CoreCompileInputs.cache
+E:\ASOfficeAddIN\ESAExcelWebAddIn\bin\Debug\OfficeAppManifests\ESAOutlookWebAddInManifest.xml

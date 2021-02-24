@@ -1,0 +1,7 @@
+False
+c9d41ada-ae71-4c4d-9e8d-e4a5b383aaced97ab2f7-559b-4027-aca6-b51e3e830e94
+{6589ef93-bbf8-493a-b14f-7a941d434cde}{89c07cb6-38f8-492e-8a6b-cac33a342b3d}
+{b949b833-c79a-4917-8d89-b921545eaf85}
+1.0.0.0
+ESAPowerPointWebAddIn
+_layouts/15/

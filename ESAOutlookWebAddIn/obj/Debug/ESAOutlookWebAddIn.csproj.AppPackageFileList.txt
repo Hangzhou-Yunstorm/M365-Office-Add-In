@@ -1,0 +1,2 @@
+bin\Debug\app.publish\OfficeAppManifests\ESAOutlookWebAddInManifest.xml
+E:\ASOfficeAddIN\ESAOutlookWebAddIn\bin\Debug\app.publish\ESAOutlookWebAddIn.app

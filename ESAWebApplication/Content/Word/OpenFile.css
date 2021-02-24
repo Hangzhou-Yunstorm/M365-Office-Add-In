@@ -1,0 +1,47 @@
+﻿.all_folder {
+    height: calc(100% - 171px);
+}
+
+.search-box .search-input {
+    border-radius: 4px;
+    padding: 1px 5px;
+    border: 1px solid #D3D4DB;
+}
+
+#open-footer {
+    position: absolute;
+    width: 90%;
+    padding: 0px 5%;
+    bottom: 0px;
+    padding-bottom: 10px;
+    background: #ffffff;
+    z-index: 2
+}
+
+    #open-footer .input-container {
+        margin-bottom: 10px;
+        padding-left: 100px;
+    }
+
+.input-container #name {
+    position: absolute;
+    left: 5%;
+    line-height: 32px;
+}
+
+.input-container input {
+    width: 100%;
+    margin-left: -14px;
+}
+
+#open-footer .btns-container {
+    text-align: right;
+}
+
+.search-input input {
+    width: calc(100% - 28px);
+}
+
+#search-results .first_ul {
+    height: calc(100% + 28px);
+}

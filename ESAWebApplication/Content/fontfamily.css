@@ -1,0 +1,27 @@
+﻿@font-face {
+    font-family: 'SourceHanSansCN-Bold';
+    src: url('../fonts/SourceHanSansCN-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Medium';
+    src: url('../fonts/SourceHanSansCN-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Normal';
+    src: url('../fonts/SourceHanSansCN-Normal.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SourceHanSansCN-Regular';
+    src: url('../fonts/SourceHanSansCN-Regular.otf') format('opentype');
+}
+
+/*默认字体*/
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea {
+    font-family: SourceHanSansCN-Normal;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}

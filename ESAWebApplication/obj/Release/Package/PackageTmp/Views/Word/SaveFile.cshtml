@@ -1,0 +1,165 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Save File</title>
+    <link href="~/Content/fontfamily.css" rel="stylesheet" />
+    <link href="~/Content/fabric.min.css" rel="stylesheet" />
+    <link href="~/Content/yc.css?v=20201202" rel="stylesheet" />
+    <link href="~/Scripts/PlugIns/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/Content/Commons/OpenAndSave.css?v=20201202" rel="stylesheet" />
+    <link href="~/Content/Word/SaveFile.css?v=20201202" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/PlugIns/layer/layer.js"></script>
+    <script src="~/Scripts/Base64.js"></script>
+
+    <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script> -->
+    <!-- 要允许使用 Office.js 的本地引用进行脱机调试，请使用:  -->
+    <script src="~/Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="~/Scripts/Office/1/office.js" type="text/javascript"></script>
+
+    <script src="~/Scripts/Common/common.js?v=20201202"></script>
+    <script src="~/Scripts/Login/Common.js?v=20201202"></script>
+    <script src="~/Scripts/PlugIns/layui/layui.js"></script>
+    <script src="~/Scripts/UIStrings.js?v=20201202"></script>
+    <script src="~/Scripts/Language.js?v=20201202"></script>
+
+    <script type="text/javascript">var __default_file_name = "Document1.docx";</script>
+    <script src="~/Scripts/Word/SaveFile.js?v=20201202"></script>
+    <script src="~/Scripts/Common/SaveFile.js?v=20201202"></script>
+</head>
+<body>
+    <div id="save_file">
+        <div class="select_title">
+            <img src="~/Images/Icons/SaveAndOpen/back.png" id="img-back" onclick="searchBack()" />
+            <img src="~/Images/Logo/home.png" id="img-home" onclick="javascript:window.location.href='/Word/Home'" />
+            <span class="SelectSavePath" style="display: none"></span>
+            <span class="SelectTypePath"></span>
+        </div>
+        <div class="search-box" style="display: none">
+            <div class="search-input">
+                <img src="~/Images/Icons/SaveAndOpen/search.png" />
+                <input type="text" id="searchText" onfocus="beginSearch()" onkeyup="onSearch()" />
+                <img src="~/Images/Icons/SaveAndOpen/cancel.png" id="img-cancel" onclick="clearSearch()" />
+            </div>
+        </div>
+        <div id="history-container" style="display: none">
+            <div class="current"><span class="current-dir AllDoc"></span></div>
+        </div>
+        <div id="dropdown" style="display: none">
+            <div class="all-document"><div class="dir-item" onclick="GoToDir('',-1)"><img src="/Images/Icons/SaveAndOpen/folder.png" /><span class="AllDoc"></span></div></div>
+            <div class="crumbs">
+            </div>
+        </div>
+        <div class="file_type_select">
+            <div class="input-container">
+                <p id="name"></p>
+                <input type="text" maxlength="255" id="fileName" class="yc-input" onkeyup="onFileNameChange()" />
+            </div>
+            <div class="file_type_title">
+                <p id="TypeSelectTitle"></p>
+            </div>
+            <div id="type_select" class="layui-form">
+                <div class="sel_div" id="AS_File">
+                    <div><input type=radio value="1" name="TypeSelect" lay-filter="TypeSelect" /></div>
+                    <div class="sel_file_path"><p class="yc-text-overflow" id="ASFilePath"></p></div>
+                    <input type="hidden" id="ASFileFolderUrl" />
+                    <input type="hidden" id="ASFileFolderName" />
+                </div>
+                <div class="sel_div" id="To_Default">
+                    <div><input type=radio value="2" name="TypeSelect" lay-filter="TypeSelect" /></div>
+                    <div class="sel_file_path"><p class="yc-text-overflow" id="ToDefaultPath"></p></div>
+                </div>
+                <div class="sel_div" id="To_Select">
+                    <div><input type=radio value="3" name="TypeSelect" lay-filter="TypeSelect" /></div>
+                </div>
+            </div>
+            <div class="type-footer">
+                <input type="button" class="yc-btn yc-btn-primary" id="confirmSelect" onclick="confirmSelect()" />
+            </div>
+        </div>
+        <div class="all_folder" style="display: none">
+            <ul class="first_ul" id="dirs">
+                <li>
+                    <div class="li_div" onclick="OpenLib('user_doc_lib')">
+                        <div class="first_img"><img src="~/Images/Icons/SaveAndOpen/person.png" /></div>
+                        <div class="first_a"><a href="javascript:void(0);"><span class="PersonalDoc"></span></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_div" onclick="OpenLib('shared_user_doc_lib')">
+                        <div class="first_img"><img src="~/Images/Icons/SaveAndOpen/share.png" /></div>
+                        <div class="first_a"><a href="javascript:void(0);"><span class="ShareDoc"></span></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_div" onclick="OpenLib('department_doc_lib')">
+                        <div class="first_img"><img src="~/Images/Icons/SaveAndOpen/groupfolder.png" /></div>
+                        <div class="first_a"><a href="javascript:void(0);"><span class="DepartmentDoc"></span></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="li_div" onclick="OpenLib('custom_doc_lib')">
+                        <div class="first_img"><img src="~/Images/Icons/SaveAndOpen/document.png" /></div>
+                        <div class="first_a"><a href="javascript:void(0);"><span class="DocLib"></span></a></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--搜索文件夹-->
+        <div id="search-results">
+        </div>
+        <!--新建文件夹-->
+        <div id="create-container">
+            <div class="select_title">
+                <img src="~/Images/Icons/SaveAndOpen/back.png" id="create-back" onclick="closeCreateDir()" />
+                <span class="NewFolder"></span>
+            </div>
+            <div class="create-content">
+                <p class="EnterFolderName"></p>
+                <input type="text" maxlength="255" class="yc-input" id="iptDirName" onkeyup="onDirNameChange()" />
+                <span class="yc-error" id="create-error"></span>
+            </div>
+            <div class="create-footer">
+                <input type="button" class="yc-btn yc-btn-primary" disabled="disabled" id="createDirBtn" onclick="onCreateDir()" />
+                <input type="button" class="yc-btn yc-btn-default" id="cancelDirBtn" onclick="closeCreateDir()" />
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="newFileName" />
+    <input type="hidden" id="folderUrl" />
+    <input type="hidden" id="folderName" />
+    <input type="hidden" id="defaultFolderName" />
+    <input type="hidden" id="defaultFolderUrl" />
+    <input type="hidden" id="saveFolderUrl" />
+    <input type="hidden" id="saveFolderName" />
+    <div style="display:none;" id="save-footer">
+        <div class="btns-container">
+            <input type="button" id="saveBtn" onclick="saveFile(3, 1)" class="yc-btn yc-btn-primary" />
+            <input type="button" class="yc-btn yc-btn-default" id="select-cancel" onclick="cancel()" />
+            <input type="button" id="CreatFolderBtn" onclick="showCreateDir()" class="yc-btn" />
+        </div>
+    </div>
+    <div id="saveFileDialogMask" style="display:none;"></div>
+    <div id="saveFileDialog" style="display: none;">
+        <div class="dialog-body">
+            <img src="~/Images/Icons/layer/notice.png" />
+            <h3 class="HadSameFile"></h3>
+            <p><span class="HadSameFileNotice"></span>“<span id="newFileNameText"></span>”）</p>
+        </div>
+        <div class="dialog-footer">
+            <input type="button" class="yc-btn yc-btn-default" id="SaveTwo" onclick="keepBoth()" />
+            <input type="button" class="yc-btn yc-btn-default" id="Replace" onclick="replace()" />
+            <input type="button" class="yc-btn yc-btn-default" id="Return" onclick="skip()" />
+        </div>
+    </div>
+</body>
+</html>

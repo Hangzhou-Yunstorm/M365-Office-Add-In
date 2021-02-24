@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAExcelWebAddIn", "ESAExcelWebAddIn\ESAExcelWebAddIn.csproj", "{0099A259-FB88-4EC9-B746-A7DFCFC62E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAOutlookWebAddIn", "ESAOutlookWebAddIn\ESAOutlookWebAddIn.csproj", "{7002DB95-5FDD-4698-B54A-1EBE49D0A544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAPowerPointWebAddIn", "ESAPowerPointWebAddIn\ESAPowerPointWebAddIn.csproj", "{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAWordWebAddIn", "ESAWordWebAddIn\ESAWordWebAddIn.csproj", "{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAWebApplication", "ESAWebApplication\ESAWebApplication.csproj", "{AAB9D308-894A-4F84-A088-F68BE09E4350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESAWebApplication.Tests", "ESAWebApplication.Tests\ESAWebApplication.Tests.csproj", "{A2588F6C-C458-421D-9089-48E9A8F44C9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0099A259-FB88-4EC9-B746-A7DFCFC62E71}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7002DB95-5FDD-4698-B54A-1EBE49D0A544}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F079B7F1-BE81-4A0A-AF4F-3CF4D1E4A7EB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE830FA5-CEE8-405C-8AF6-90B19896FCEA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AAB9D308-894A-4F84-A088-F68BE09E4350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB9D308-894A-4F84-A088-F68BE09E4350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB9D308-894A-4F84-A088-F68BE09E4350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB9D308-894A-4F84-A088-F68BE09E4350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2588F6C-C458-421D-9089-48E9A8F44C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2588F6C-C458-421D-9089-48E9A8F44C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2588F6C-C458-421D-9089-48E9A8F44C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2588F6C-C458-421D-9089-48E9A8F44C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {075A0673-A444-461A-BF06-8301A298803B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://13.76.198.75/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ESAExcelWebAddIn\\ESAExcelWebAddIn.csproj
+		SccProjectName1 = ESAExcelWebAddIn
+		SccLocalPath1 = ESAExcelWebAddIn
+		SccProjectUniqueName2 = ESAOutlookWebAddIn\\ESAOutlookWebAddIn.csproj
+		SccProjectName2 = ESAOutlookWebAddIn
+		SccLocalPath2 = ESAOutlookWebAddIn
+		SccProjectUniqueName3 = ESAPowerPointWebAddIn\\ESAPowerPointWebAddIn.csproj
+		SccProjectName3 = ESAPowerPointWebAddIn
+		SccLocalPath3 = ESAPowerPointWebAddIn
+		SccProjectUniqueName4 = ESAWordWebAddIn\\ESAWordWebAddIn.csproj
+		SccProjectName4 = ESAWordWebAddIn
+		SccLocalPath4 = ESAWordWebAddIn
+		SccProjectUniqueName5 = ESAWebApplication\\ESAWebApplication.csproj
+		SccProjectName5 = ESAWebApplication
+		SccLocalPath5 = ESAWebApplication
+		SccProjectUniqueName6 = ESAWebApplication.Tests\\ESAWebApplication.Tests.csproj
+		SccProjectName6 = ESAWebApplication.Tests
+		SccLocalPath6 = ESAWebApplication.Tests
+	EndGlobalSection
+EndGlobal

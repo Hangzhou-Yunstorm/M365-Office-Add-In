@@ -1,0 +1,2 @@
+bin\Debug\app.publish\OfficeAppManifests\ESAWordWebAddInManifest.xml
+E:\ASOfficeAddIN\ESAWordWebAddIn\bin\Debug\app.publish\ESAWordWebAddIn.app

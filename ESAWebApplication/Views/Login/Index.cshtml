@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Login</title>
+    <link href="~/Content/fontfamily.css" rel="stylesheet" />
+    <link href="~/Scripts/PlugIns/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/Content/fabric.min.css" rel="stylesheet" />
+    <link href="~/Content/Login/Index.css?v=20201202" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/PlugIns/layui/layui.js"></script>
+
+    <!-- <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script> -->
+    <!-- 要允许使用 Office.js 的本地引用进行脱机调试，请使用:  -->
+    <script src="~/Scripts/Office/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="~/Scripts/Office/1/office.js" type="text/javascript"></script>
+
+    <script src="~/Scripts/Login/Common.js?v=20201202"></script>
+    <script src="~/Scripts/UIStrings.js?v=20201202"></script>
+    <script src="~/Scripts/Language.js?v=20201202"></script>
+    <script src="~/Scripts/Login/Index.js?v=20201202"></script>
+</head>
+<body>
+    <div style="padding: 20px 5%;">
+        <input type="hidden" value="@ViewBag.Flag" id="g_flag" />
+        <div class="lg_set layui-form">
+            <select id="languageSelect" class="layui-select" lay-filter="languageSelect">
+                <option value="zh-cn">简体中文</option>
+                <option value="zh-tw">繁體中文</option>
+                <option value="en-us">English</option>
+            </select>
+        </div>
+        <div class="lg_set">
+            <img src="~/Images/Logo/language.png" />
+        </div>
+        <div class="logo">
+            <img src="~/Images/Logo/logo.png" />
+        </div>
+        <div class="logining">
+            <img src="~/Images/Logo/logining.png" />
+        </div>
+        <div class="submit-login">
+            <input type="button" onclick="Login()" id="btn-login" class="btn-login" />
+        </div>
+        <div class="error">
+            <div id="login-error-msg"></div>
+        </div>
+        @*<input type="button" value="Open Browser" onclick="LoginBrowser()" />*@
+    </div>
+
+</body>
+</html>
