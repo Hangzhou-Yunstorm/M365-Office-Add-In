@@ -1,5 +1,5 @@
 #简介
-爱数 AnyShare Office 插件
+M365 Office 插件
 
 #模块说明
 
